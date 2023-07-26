@@ -12,10 +12,12 @@
 
     if(isset($_POST['tambah'])){
         if(tambah($_POST) > 0) {
-            header("Location: tambah-sukses.php");
+            $_SESSION["status"] = "Laundry Berhasil Diambil!";
+            header("Location: index.php");
         } 
         else {
-            header("Location: tambah-gagal.php");   
+            $_SESSION["failed"] = "Laundry Gagal Diambil!";
+            header("Location: index.php");   
         }
     }
 

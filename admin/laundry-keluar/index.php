@@ -13,6 +13,31 @@
     ?>
 
 <div class="container mt-4 h1 request-heading">Laundry Keluar</div>
+<?php if(isset($_SESSION["status"])){ ?>
+            <div class="container">
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <?= $_SESSION["status"] ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+<?php 
+} 
+$_SESSION["status"] = null
+?>
+
+<?php if(isset($_SESSION["failed"])){ ?>
+            <div class="container">
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <?= $_SESSION["failed"] ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+<?php 
+} 
+$_SESSION["failed"] = null
+?>
+
+
 <div class="text-end container">
     <a href="../laundry-keluar/tambah.php"><button type="button" class="btn btn-orange">Tambah Data</button></a>
 </div>

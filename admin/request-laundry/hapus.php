@@ -11,9 +11,11 @@
     $id = $_GET["id"];
     
     if(hapus($id) > 0) {
-        header("Location: hapus-sukses.php");
+        $_SESSION["status"] = "Request Berhasil Dihapus!";
+        header("Location: index.php");
     }
     else {
-        header("Location: hapus-gagal.php");
+        $_SESSION["failed"] = "Request Gagal Dihapus!";
+        header("Location: index.php");
     }    
 ?>

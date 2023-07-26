@@ -27,6 +27,7 @@
 
     <div class="container">
     <p>Halo <b><?php echo $username;?></b>, Selamat datang di Tanjung Indah Laundry</p>
+    <?php header("Location: request-laundry"); ?>
     </div>
 
 

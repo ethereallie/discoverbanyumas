@@ -10,10 +10,12 @@
 
     if(isset($_POST['tambah'])){
         if(tambah($_POST) > 0) {
-            header("Location: tambah-sukses.php");
+            $_SESSION["status"] = "Request Berhasil Ditambahkan!";
+            header("Location: index.php");
         } 
         else {
-            header("Location: tambah-gagal.php");
+            $_SESSION["failed"] = "Request Gagal Ditambahkan!";
+            header("Location: index.php");
         }
     }
 
@@ -31,19 +33,19 @@
                             <div class="form-group">
                                 <label class="control-label col-sm-2">Nama Konsumen :</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="nama_konsumen" placeholder="Bheta" required>
+                                    <input type="text" class="form-control" name="nama_konsumen" placeholder="Nama Konsumen" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-sm-2">Berat (kg) :</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="berat" placeholder="2" required>
+                                    <input type="text" class="form-control" name="berat" placeholder="Contoh: 5" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-sm-2">Kategori :</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="kategori" placeholder="Normal">
+                                    <input type="text" class="form-control" name="kategori" placeholder="Normal, Ekspress, 24 Jam">
                                 </div>
                             </div>
                             <div class="form-group">

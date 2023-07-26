@@ -13,10 +13,12 @@
 
     if(isset($_POST['update'])){
         if(ubah($_POST) > 0) {
-            header("Location: ubah-sukses.php");
+            $_SESSION["status"] = "Request Berhasil Diubah!";
+            header("Location: index.php");
         }
         else {
-            header("Location: ubah-gagal.php?id=$id");
+            $_SESSION["failed"] = "Request Gagal Diubah!";
+            header("Location: index.php");
         }
     }    
 

@@ -57,13 +57,23 @@
         <title>Login</title>
         
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-        <link rel="stylesheet" href="signin.css">    
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./signin.css">   
+ 
     </head>
     <body class="text-center">
         <form class="form-signin" action="" method="post">
             <img class="mb-4" src="../assets/img/logo.png" alt="" width="200">
 
             <h1 class="h3 mb-3 font-weight-normal">Tanjung Indah Laundry</h1>
+            <?php if(isset($error)) : ?>
+            <div class="">
+                <div class="mt-3 alert alert-danger show" role="alert">
+                    Username atau password salah!
+                </div>
+            </div>
+
+            <?php endif; ?>
 
             <label for="username" class="sr-only">Username</label>
             <input type="text" name="username" id="username" class="form-control" placeholder="Username" required autofocus>
@@ -76,10 +86,7 @@
                     <input type="checkbox" name="remember" id="remember"> Remember Me
                 </label>
             </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit" name="login">Login</button>
-            <?php if(isset($error)) : ?>
-                <script>alert('Username atau password salah!')</script>
-            <?php endif; ?>
+            <button class="btn btn-lg btn-dark btn-block" type="submit" name="login">Login</button>
             <p class="mt-5 mb-3 text-muted">&copy; S1 Software Engineering 05A</p>
         </form>
     </body>

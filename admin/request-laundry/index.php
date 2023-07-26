@@ -14,6 +14,34 @@
     ?>
 <div class="container mt-4 h1 request-heading">Order Masuk</div>
 
+<?php if(isset($_SESSION["status"])){ ?>
+            <div class="container">
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <?= $_SESSION["status"] ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+<?php 
+} 
+$_SESSION["status"] = null
+?>
+
+<?php if(isset($_SESSION["failed"])){ ?>
+            <div class="container">
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <?= $_SESSION["failed"] ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+<?php 
+} 
+$_SESSION["failed"] = null
+?>
+
+
+
+
+
 <div class="container text-end">
     <a href="tambah.php"><button type="button" class="btn btn-orange">Tambah Data</button></a>
 </div>
@@ -42,7 +70,7 @@
                 <td><?= date_format($date,"d/m/Y"); ?></td>                                    
                 <td><?= $enter["nama_konsumen"] ?></td>
                 <td><?= $enter["kategori"] ?></td>                                    
-                <td><a href="ubah.php?id=<?= $enter["id"]; ?>"><span class="fa-solid fa-pen" style="color: #000000;" title="Edit Data"></span></a>  <a href="hapus.php?id=<?= $enter["id"]; ?>"><span class="ms-3 fa-solid fa-trash" style="color: #000000;"title="Hapus Data" onclick="return confirm('Yakin?')"></span></a></td>
+                <td><a href="ubah.php?id=<?= $enter["id"]; ?>"><span class="fa-solid fa-pen" style="color: #000000;" title="Edit Data"></span></a>  <a href="hapus.php?id=<?= $enter["id"]; ?>"><span class="ms-3 fa-solid fa-trash" style="color: #000000;"title="Hapus Data" onclick="return confirm('Apakah anda ingin menghapus data ini?')"></span></a></td>
             </tr>               
             <?php $no++; ?>                 
             <?php endforeach; ?>                    
