@@ -1,0 +1,39 @@
+li.nav-item{
+    padding: 12px 12px;
+    font-weight: 600;
+}
+
+
+.btn-logout {
+    background-color: #ffcc00;
+    color: black;
+    font-weight: 600;
+    padding: 6px 36px;
+}
+
+.btn-logout:hover {
+    background-color: #ffcc00;
+    color: black;
+    font-weight: 600;
+    padding: 6px 36px;
+}
+
+.btn-orange{
+    background-color: #395bb2;
+    color: white;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    background-color: #395bb2;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+.request-heading {
+    font-weight: 600;
+
+}
