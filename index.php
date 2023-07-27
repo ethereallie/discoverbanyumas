@@ -55,7 +55,7 @@
             <div class="container text-center">
                 <h1>Laundry terbersih, termurah, dan tercepat<br>di Purwokerto</h1>
                 <p>Percayakan cucianmu ke tenaga profesional dengan peralatan canggih dan garansi uang kembali</p>
-                <a href="#services" class="btn btn-cta">Lihat layanan</a>
+                <a href="#layanan" class="btn btn-cta">Lihat layanan</a>
             </div>
         </section>
 
@@ -67,7 +67,7 @@
                         <img src="assets/about.jpg" alt="Tentang" class="img-fluid">
                     </div>
                     <div class="col-lg-6">
-                        <h2>Tentang Kami</h2>
+                        <h2 class="mb-4">Tentang Kami</h2>
                         <p>Sejak didirikan, kami dengan bangga melayani pelanggan dengan layanan pembersihan yang profesional dan ramah lingkungan. Didukung oleh tim berpengalaman dan teknologi canggih, kami berkomitmen untuk memberikan hasil terbaik bagi pakaian dan linen Anda. Ketepatan waktu, kebersihan, dan kepuasan pelanggan adalah prinsip inti kami, sehingga Anda dapat mempercayakan pakaian berharga Anda kepada kami dengan keyakinan penuh. Segera kunjungi Tanjung Indah Laundry dan rasakan perbedaan yang luar biasa dalam merawat pakaian Anda.</p>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
         <!-- Services Section -->
         <section class="services py-5" id="layanan">
             <div class="container text-center">
-                <h2>Layanan Kami</h2>
+                <h2 class="mb-4">Layanan Kami</h2>
                 <div class="row justify-content-center">
                     <!-- Card 1 -->
                     <div class="col-lg-4 mb-4">
@@ -137,7 +137,7 @@
         <!-- Testimonials Section -->
         <section class="testimonial py-5" id="testimoni">
             <div class="container">
-                <h2 class="text-center">Testimoni</h2>
+                <h2 class="text-center mb-4">Testimoni</h2>
                 <div class="testimonial-slider">
                     <!-- Testimonial 1 -->
                     <div class="testimonial-card">
