@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://kit.fontawesome.com/b229c07b4a.js" crossorigin="anonymous" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/b229c07b4a.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
@@ -381,7 +382,29 @@
         });
     </script>
 
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="btn btn-primary btn-floating"><i class="fas fa-arrow-up"></i></button>
 
+    <script>
+        $(document).ready(function() {
+            // Show or hide the "Back to Top" button based on the scroll position
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 200) {
+                    $('#backToTopBtn').fadeIn();
+                } else {
+                    $('#backToTopBtn').fadeOut();
+                }
+            });
+
+            // Scroll to the top when the button is clicked
+            $('#backToTopBtn').click(function() {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 'slow');
+                return false;
+            });
+        });
+    </script>
 </body>
 
 </html>
