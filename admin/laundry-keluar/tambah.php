@@ -8,7 +8,7 @@
         exit;
     }        
 
-    $exits = tampil("SELECT * FROM transaksi WHERE status = 'Belum diambil' ORDER BY nama_konsumen, masuk ASC");
+    $exits = tampil("SELECT * FROM transaksi WHERE status = 'Belum diambil' ORDER BY nama_customer, masuk ASC");
 
     if(isset($_POST['tambah'])){
         if(tambah($_POST) > 0) {
@@ -39,7 +39,7 @@
                                     <select class="form-control" name="id">    
                                         <option> Pilih Transaksi </option>
                                         <?php foreach ($exits as $exit) : ?>
-                                        <option value="<?= $exit["id"]; ?>"><?= $exit["nama_konsumen"]; ?> - <?php $masuk = $exit['masuk']; $dateMasuk = date_create("$masuk"); echo date_format($dateMasuk,"d/m/Y"); ?> - <?= $exit["berat"]; ?> kg - <?= $exit["kategori"]; ?></option>
+                                        <option value="<?= $exit["id"]; ?>"><?= $exit["nama_customer"]; ?> - <?php $masuk = $exit['masuk']; $dateMasuk = date_create("$masuk"); echo date_format($dateMasuk,"d/m/Y"); ?> - <?= $exit["berat"]; ?> kg - <?= $exit["layanan"]; ?></option>
                                         <?php endforeach; ?>
                                     </select>
                                 </div>
