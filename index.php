@@ -5,15 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tanjung Indah Laundry | Penyelamat Kala Padat Sampai Mencucipun Tak Sempat</title>
+
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/b229c07b4a.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
-
 </head>
 
 <body>
@@ -51,7 +54,7 @@
     </header>
     <main>
         <!-- Hero Section -->
-        <section class="hero py-5 d-flex align-items-center justify-content-center">
+        <section class="hero py-5 d-flex align-items-center justify-content-center animate-on-scroll">
             <div class="container text-center">
                 <h1>Laundry terbersih, termurah, dan tercepat<br>di Purwokerto</h1>
                 <p>Percayakan cucianmu ke tenaga profesional dengan peralatan canggih dan garansi uang kembali</p>
@@ -60,7 +63,7 @@
         </section>
 
         <!-- About Section -->
-        <section class="about py-5" id="tentang">
+        <section class="about py-5 animate-on-scroll" id="tentang">
             <div class=" container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
@@ -76,7 +79,7 @@
 
 
         <!-- Services Section -->
-        <section class="services py-5" id="layanan">
+        <section class="services py-5 animate-on-scroll" id="layanan">
             <div class="container text-center">
                 <h2 class="mb-4">Layanan Kami</h2>
                 <div class="row justify-content-center">
@@ -135,7 +138,7 @@
 
 
         <!-- Testimonials Section -->
-        <section class="testimonial py-5" id="testimoni">
+        <section class="testimonial py-5 animate-on-scroll" id="testimoni">
             <div class="container">
                 <h2 class="text-center mb-4">Testimoni</h2>
                 <div class="testimonial-slider">
@@ -216,19 +219,19 @@
 
 
         <!-- Pickup Request Form Section -->
-        <section class="pickup-request py-5" id="request">
+        <section class="pickup-request py-5 animate-on-scroll" id="request">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <h2 class="text-center mb-4">Gunakan Layanan Kami</h2>
-                        <form action="/submit_pickup_request" method="POST">
+                        <form id="requestForm" action="process_form.php" method="POST">
                             <div class="mb-3">
-                                <label for="nama" class="form-label">Nama</label>
-                                <input type="text" class="form-control" id="nama" name="nama" required>
+                                <label for="nama_customer" class="form-label">Nama</label>
+                                <input type="text" class="form-control" id="nama_customer" name="nama_customer" required>
                             </div>
                             <div class="mb-3">
-                                <label for="nomor" class="form-label">Nomor WhatsApp</label>
-                                <input type="tel" class="form-control" id="nomor" name="nomor" required>
+                                <label for="nomor_whatsapp" class="form-label">Nomor WhatsApp</label>
+                                <input type="tel" class="form-control" id="nomor_whatsapp" name="nomor_whatsapp" required>
                             </div>
                             <div class="mb-3">
                                 <label for="layanan" class="form-label">Layanan yang dibutuhkan</label>
@@ -259,6 +262,23 @@
                 </div>
             </div>
         </section>
+
+        <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="successModalLabel">Success!</h5>
+                    </div>
+                    <div class="modal-body">
+                        Form submitted successfully!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-cta" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
     <footer class="footer py-4">
         <div class="container text-center">
@@ -270,7 +290,6 @@
         </div>
     </footer>
 
-
     <script>
         mapboxgl.accessToken = 'pk.eyJ1Ijoic2hubmNoaW50eWEiLCJhIjoiY2xra2ZpMXY0MHkxaTNrcDR1Y2J6NnFrZSJ9.JmdqRTNIkZHJhWClLmMDIg';
         const map = new mapboxgl.Map({
@@ -281,6 +300,96 @@
             zoom: 9 // starting zoom
         });
     </script>
+
+    <script>
+        // Function to check if an element is in the viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Function to add animation class to elements when they are in the viewport
+        function handleScrollAnimations() {
+            const sections = document.querySelectorAll('.animate-on-scroll');
+
+            sections.forEach((section) => {
+                if (isInViewport(section)) {
+                    // Add the "animate__animated" class to the element
+                    section.classList.add('animate__animated');
+
+                    // Add the corresponding animation class based on the section's class
+                    if (section.classList.contains('hero')) {
+                        section.classList.add('animate__zoomIn');
+                    } else if (section.classList.contains('about')) {
+                        section.classList.add('animate__fadeInLeft');
+                    } else if (section.classList.contains('services')) {
+                        section.classList.add('animate__fadeInRight');
+                    } else if (section.classList.contains('testimonial')) {
+                        section.classList.add('animate__fadeInUp');
+                    } else if (section.classList.contains('pickup-request')) {
+                        section.classList.add('animate__slideInLeft');
+                    }
+                }
+            });
+        }
+
+        // Event listener for scroll to trigger animations
+        document.addEventListener('scroll', handleScrollAnimations);
+
+        // Trigger animations on page load
+        handleScrollAnimations();
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            function showSuccessModal() {
+                $('#successModal').modal('show');
+            }
+
+            $('form').submit(function(event) {
+                event.preventDefault();
+                $.ajax({
+                    type: 'POST',
+                    url: 'process_form.php',
+                    data: $(this).serialize(),
+                    dataType: 'json',
+                    success: function(response) {
+                        if (response.success) {
+                            // Show the success modal
+                            showSuccessModal();
+                        } else {
+                            // Handle error case if needed
+                        }
+                    },
+                    error: function() {
+                        // Handle error case if needed
+                    }
+                });
+            });
+
+            // Event binding for the close button
+            $('#successModal .btn-close, #successModal .btn-cta').click(function() {
+                $('#successModal').modal('hide');
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            // Event binding for the close button
+            $('#successModal').on('hidden.bs.modal', function() {
+                // Reset the form after the modal is closed
+                $('#requestForm').trigger('reset');
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>

@@ -175,4 +175,34 @@ h1, h2, h3, h4, h5, h6, h7 {
   footer .logo {
     max-width: 100px; /* Adjust the logo size as needed */
   }
+
+  /* Navbar Animation */
+  .navbar.animated.fadeInDown {
+    animation: fadeInDown 1s ease forwards;
+  }
+
+  /* Hero Section Animation */
+  .hero.animated.zoomIn {
+    animation: zoomIn 1s ease forwards;
+  }
+
+  /* About Section Animation */
+  .about.animated.fadeInLeft {
+    animation: fadeInLeft 1s ease forwards;
+  }
+
+  /* Service Section Animation */
+  .services.animated.fadeInRight {
+    animation: fadeInRight 1s ease forwards;
+  }
+
+  /* Testimonial Section Animation */
+  .testimonial.animated.fadeInUp {
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  /* Request Form Section Animation */
+  .pickup-request.animated.slideInLeft {
+    animation: slideInLeft 1s ease forwards;
+  }
   
