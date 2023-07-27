@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tanjung Indah Laundry | Penyelamat Kala Padat Sampai Mencucipun Tak Sempat</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
@@ -59,17 +60,17 @@
         </section>
 
         <!-- About Section -->
-        <section class="about py-5" id="tentang>
+        <section class="about py-5" id="tentang">
             <div class=" container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <img src="assets/about.jpg" alt="Tentang" class="img-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <img src="assets/about.jpg" alt="Tentang" class="img-fluid">
+                    </div>
+                    <div class="col-lg-6">
+                        <h2>Tentang Kami</h2>
+                        <p>Sejak didirikan, kami dengan bangga melayani pelanggan dengan layanan pembersihan yang profesional dan ramah lingkungan. Didukung oleh tim berpengalaman dan teknologi canggih, kami berkomitmen untuk memberikan hasil terbaik bagi pakaian dan linen Anda. Ketepatan waktu, kebersihan, dan kepuasan pelanggan adalah prinsip inti kami, sehingga Anda dapat mempercayakan pakaian berharga Anda kepada kami dengan keyakinan penuh. Segera kunjungi Tanjung Indah Laundry dan rasakan perbedaan yang luar biasa dalam merawat pakaian Anda.</p>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <h2>Tentang Kami</h2>
-                    <p>Sejak didirikan, kami dengan bangga melayani pelanggan dengan layanan pembersihan yang profesional dan ramah lingkungan. Didukung oleh tim berpengalaman dan teknologi canggih, kami berkomitmen untuk memberikan hasil terbaik bagi pakaian dan linen Anda. Ketepatan waktu, kebersihan, dan kepuasan pelanggan adalah prinsip inti kami, sehingga Anda dapat mempercayakan pakaian berharga Anda kepada kami dengan keyakinan penuh. Segera kunjungi Tanjung Indah Laundry dan rasakan perbedaan yang luar biasa dalam merawat pakaian Anda.</p>
-                </div>
-            </div>
             </div>
         </section>
 
@@ -134,7 +135,7 @@
 
 
         <!-- Testimonials Section -->
-        <section class="testimonial py-5">
+        <section class="testimonial py-5" id="testimoni">
             <div class="container">
                 <h2 class="text-center">Testimoni</h2>
                 <div class="testimonial-slider">
@@ -215,7 +216,7 @@
 
 
         <!-- Pickup Request Form Section -->
-        <section class="pickup-request py-5">
+        <section class="pickup-request py-5" id="request">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
