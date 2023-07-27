@@ -1,0 +1,175 @@
+li.nav-item{
+    padding: 12px 12px;
+    font-weight: 600;
+}
+
+
+.btn-cta {
+    background-color: #ffcc00;
+    color: black;
+    font-weight: 600;
+    padding: 6px 36px;
+}
+
+.btn-cta:hover {
+    background-color: #ffcc00;
+    color: black;
+    font-weight: 600;
+    padding: 6px 36px;
+}
+
+.btn-blue{
+    background-color: #395bb2;
+    color: white;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    background-color: #395bb2;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+.hero {
+    height: 100vh;
+    background-image: url('../cover.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 60px;
+    color: #ffcc00;
+    font-weight: bolder;
+}
+
+.hero p {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+  
+.about img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+  
+.about h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+  
+.about p {
+    font-size: 16px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 16px;
+  }
+
+.testimonial {
+    width: 100%;
+  }
+  
+  .testimonial-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .testimonial-card {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    scroll-snap-align: center;
+    width: 300px;
+  }
+  
+  .testimonial-card .card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .customer-name {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .service {
+    font-size: 14px;
+    color: #888;
+  }
+
+.pickup-form {
+    width: 100%;
+  }
+
+.pickup-form form {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .pickup-form .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  textarea.form-control {
+    resize: vertical; /* Allow vertical resizing for the textarea */
+  }
+
+  
+  footer {
+    background-color: #395bb2;
+    color: #fff;
+  }
+  
+  footer .logo {
+    max-width: 100px; /* Adjust the logo size as needed */
+  }
+  
