@@ -230,10 +230,6 @@
                                 <input type="text" class="form-control" id="nama_customer" name="nama_customer" required>
                             </div>
                             <div class="mb-3">
-                                <label for="nomor_whatsapp" class="form-label">Nomor WhatsApp</label>
-                                <input type="tel" class="form-control" id="nomor_whatsapp" name="nomor_whatsapp" required>
-                            </div>
-                            <div class="mb-3">
                                 <label for="layanan" class="form-label">Layanan yang dibutuhkan</label>
                                 <select class="form-select" id="layanan" name="layanan" required>
                                     <option value="cuci-3-jam">Cuci 3 jam</option>
@@ -249,10 +245,6 @@
                                     <option value="komplit-2-hari">Paket Komplit 2 hari</option>
                                     <option value="komplit-3-hari">Paket Komplit 3 hari</option>
                                 </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="catatan" class="form-label">Catatan</label>
-                                <textarea class="form-control" id="catatan" name="catatan" rows="4"></textarea>
                             </div>
                             <button type="submit" class="btn btn-cta">Submit</button>
                         </form>

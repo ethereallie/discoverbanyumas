@@ -2,9 +2,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve the form data
     $nama_customer = $_POST['nama_customer'];
-    $nomor_whatsapp = $_POST['nomor_whatsapp'];
     $layanan = $_POST['layanan'];
-    $catatan = $_POST['catatan'];
 
     // Replace with your database credentials
     $host = 'localhost';
@@ -21,9 +19,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Prepare and execute the SQL query to insert the data into the database
-    $sql = "INSERT INTO transaksi (masuk, keluar, nama_customer, nomor_whatsapp, layanan, berat, catatan, harga_satuan, harga_total, status) VALUES (NOW(), NULL, ?, ?, ?, NULL, ?, NULL, NULL, NULL)";
+    $sql = "INSERT INTO transaksi (masuk, keluar, nama_customer, layanan, berat, harga_satuan, harga_total, status) VALUES (NOW(), NULL, ?, ?, NULL, NULL, NULL, NULL)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssss", $nama_customer, $nomor_whatsapp, $layanan, $catatan);
+    $stmt->bind_param("ssss", $nama_customer, $layanan);
 
     // Initialize a variable to track the success status
     $success = false;
